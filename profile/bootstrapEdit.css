@@ -1,0 +1,225 @@
+.cont {
+    padding: 0 45px;
+  }
+  
+  .navbar {
+    position: sticky;
+  }
+  
+  .navbar-nav {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+  
+  .info-col,
+  .post-col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-secondary {
+    color: #fff;
+    background-color: #007bff;
+    border: none !important;
+  }
+  
+  .show > .btn-secondary.dropdown-toggle {
+    color: #000;
+    background-color: #007bff;
+    border: 0 !important;
+  }
+  
+  .dropdown {
+    width: 50px;
+  }
+  
+  .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: none !important;
+  }
+  
+  .btn-secondary:focus {
+    background-color: #007bff;
+  
+    box-shadow: none !important;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #007bff;
+  }
+  
+  .show > .btn-secondary.dropdown-toggle:hover {
+    color: #000;
+    background-color: #007bff;
+    border: 0 !important;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show > .btn-secondary.dropdown-toggle {
+    background-color: #007bff;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 190%;
+    width: 550px;
+    left: auto !important;
+    right: 38% !important;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  
+  /* .dropdown-menu p {
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+      margin-bottom: 0;
+      background-color: #000;
+      color: #fff;
+  } */
+  
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: inherit;
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dropdown-item:hover {
+      color: #0062cc;
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu.show::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent #333 transparent;
+    top: -20px;
+    right: 0px;
+  }
+  
+  .dropdown button:focus i {
+    color: #000 !important;
+  }
+  
+  .dropdown-menu.show::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent #333 transparent;
+    top: -20px;
+    right: 0px;
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 1200px) {
+      .mt-4 {
+          margin-top: 4rem!important;
+      }
+    .dropdown button:focus i {
+      color: #000 !important;
+    }
+  
+    .dropdown-menu {
+      position: absolute;
+      top: 360% !important;
+      left: auto !important;
+    }
+  
+    .navbar-nav .dropdown-menu {
+      right: 0 !important;
+      top: 360% !important;
+      position: absolute !important;
+      width: 350px !important;
+    }
+    .dropdown-menu.show::before {
+      content: none !important;
+    }
+  }
+  
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  @media (max-width: 1199px) {
+    .row {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  
+    .navbar-nav {
+      margin-top: 90px !important;
+    }
+  
+    .side {
+      position: fixed;
+      margin-bottom: 60px;
+      height: 0;
+      margin-top: 0;
+      z-index: 1000;
+      padding: 0;
+    }
+  
+    .side ul {
+      list-style: none;
+      color: #fff;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      /* position: sticky;
+      top: 77.71px;
+      left: 0; */
+      z-index: 100;
+      width: 100%;
+      background-color: #0062cc;
+    }
+    .side ul li {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width:992px) and (max-width:1199px)  {
+      .navbar-nav {
+          margin-top: 0 !important;
+      }
+  }
+  
+  @media (max-width:767px) {
+      .side ul li{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          font-size: 14px;
+      }
+      .mt-4 {
+          margin-top: 5rem!important;
+      }
+  }

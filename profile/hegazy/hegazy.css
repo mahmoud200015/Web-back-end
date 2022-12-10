@@ -1,0 +1,145 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+/* ----------------------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1876f2;
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  width: 120px;
+  margin-right: 45px;
+}
+
+.nav_left,
+.nav_right {
+  display: flex;
+  align-items: center;
+}
+
+.nav_right>ul {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+
+}
+
+.nav_right>ul i {
+  font-size: 20px;
+  /* margin-left: 25px; */
+  color: #fff;
+}
+
+.nav_right>ul i:hover {
+  color: #333;
+}
+
+.nav_right ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav_right ul li img {
+  width: 28px;
+  margin: 0 15px;
+}
+
+.nav-user-icon img {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-user-icon {
+  margin-left: 30px;
+}
+
+.search-box {
+  background: #efefef;
+  width: 400px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.search-box img {
+  width: 18px;
+}
+
+.search-box input,
+.input {
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: 0;
+}
+
+.online {
+  position: relative;
+}
+
+.online::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #41db51;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+/* ------------------------- */
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: wrap column;
+}
+h1 {
+  border-left: 5px solid #333;
+  margin: 30px 40px;
+  padding: 3px;
+}
+
+label {
+  display: block;
+  margin: 10px 60px;
+}
+[type="text"] {
+  margin: 0 60px;
+  width: 650px;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+[type="submit"] {
+  padding: 10px 14px;
+  background-color: rgba(0, 0, 255, 0.66);
+  color: #FFF;
+  border-radius: 5px;
+  margin: 40px 520px;
+  font-size: 18px;
+}

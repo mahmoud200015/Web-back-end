@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrapEdit.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid cont">
+            <a class="navbar-brand col-2 col-sm-2" href="#"><img src="images/logo.png" alt="logo" class="logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto col-12 col-sm-12">
+                    <div class="nav_right">
+                        <div class="search-box">
+                            <img src="images/search.png" />
+                            <input type="text" placeholder="Search" />
+                        </div>
+                   
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-bell"></i>
+
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit. Debitis enim, veritatis velit illo vitae consectetur
+                                            laborum perspiciatis quisquam at, laboriosam qui quasi distinctio fugit
+                                            delectus perferendis autem dignissimos soluta veniam!</a>
+                                        <a class="dropdown-item" href="#">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing elit. Eos, minima nam et incidunt </a>
+                                        <a class="dropdown-item" href="#">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing elit. Eos, minima nam et incidunt </a>
+                                        <a class="dropdown-item" href="#">Lorem ipsum dolor, sit amet consectetur
+                                            adipisicing elit. Eos, minima nam et incidunt </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <li>
+                        <a class="aa" href="log.html"><button type="button" class="lout">Log out</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- profile page  -->
+
+    <div class="modal">
+        <img src="img/profile.jpg" alt="">
+        <div class="close"></div>
+    </div>
+
+    <div class="row">
+        <div class="side col-xl-2">
+            <ul>
+                <li>
+                    <i class="fas fa-newspaper"></i> Latest News
+                </li>
+                <li>
+                    <i class="fas fa-users"></i> Groups
+                </li>
+                <li>
+                    <i class="fas fa-book-open"></i> Matriels
+                </li>
+                <li>
+                    <i class="fas fa-cog"></i> Settings
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-sm pt-4 col-9 mt-4">
+            <div class="profile-container">
+                <div class="card">
+                    <div class="header">
+                        <div class="main">
+                            <div class="image">
+                                <div class="hover">
+                                    <i class="fas fa-camera fa-2x"></i>
+                                </div>
+                            </div>
+                            <h3 class="name">John Doe</h3>
+                            <h3 class="sub-name">@J_Doe</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info ">
+                    <div class="info-col  col-sm-12 col-xl-4 ">
+                        <div class="profile-intro col-12 ">
+                            <h3 class="text-center">Intro</h3>
+                            <p class="intro-text">
+                                Belive in your self and you can do unbleiveable things.
+                                <img src="images/feeling.png" />
+                            </p>
+                            <hr />
+                            <ul>
+                                <li>
+                                    <img src="images/profile-job.png" /> Director At 99ltd media
+                                </li>
+                                <li><img src="images/profile-study.png" />Studied At Bfcai</li>
+                                <li><img src="images/profile-study.png" />went to Egx</li>
+                                <li><img src="images/profile-home.png" />Lives in Egypt</li>
+                                <li><img src="images/profile-location.png" />From Alex</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="post-col col-sm-12 col-xl-8">
+                        <div class="posts">
+                            <div class="user-profile">
+                                <img src="images/profile-pic.png" />
+                                <div>
+                                    <p>User Name</p>
+                                    <span>March 1 2021 , 14:30 pm</span>
+                                </div>
+                            </div>
+                            <p class="post-text">Welcome to our Socail App</p>
+                            <img src="images/feed-image-1.png" class="post-img" />
+                            <div class="post-raw">
+                                <div class="activity">
+                                    <div>
+                                        <a href="#"><i class="fas fa-thumbs-up"></i></a>120
+                                    </div>
+                                    <div>
+                                        <a href="#"><i class="fas fa-comment"></i></a>22
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <textarea placeholder="Write your comment...." class="comment-input"></textarea>
+                                <button><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                        <button type="button" class="lp">Load More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
