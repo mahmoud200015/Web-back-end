@@ -3961,10 +3961,162 @@ console.log(url6.match(urlRe));
   - Inheritance
 */
 
+// // Parent Class
+// class User {
+//   constructor(id, username, email) {
+//     this.i = id;
+//     this.u = username;
+//     this.e = email;
+//   }
+//   sayHello() {
+//     return `Hello ${this.u}`;
+//   }
+// }
+
+// // Derived Class
+// class Admin extends User {
+//   constructor(id, username, permissions) {
+//     super(id, username);
+//     this.p = permissions;
+//   }
+//   sayHello() {
+//     return `Hello ${this.u}`;
+//   }
+// }
+
+// class Superman extends Admin {
+//   constructor(id, username, permissions, ability) {
+//     super(id, username, permissions);
+//     this.a = ability;
+//   }
+// }
 
 
+// let userOne = new User(100, "Elzero");
+// let adminOne = new Admin(110, 'Mahmoud', 1);
 
+// console.log(userOne.u);
+// console.log(userOne.sayHello());
+// console.log('####');
+// console.log(adminOne.i);
+// console.log(adminOne.u);
+// console.log(adminOne.p);
+// console.log(adminOne.sayHello());
 
+/*
+  Encapsulation
+  - Class Fields Are Public By Default
+  - Guards The Data Against Illegal Access.
+  - Helps To Achieve The Target Without Revealing Its Complex Details.
+  - Will Reduce Human Errors.
+  - Make The App More Flexible And Manageable.
+  - Simplifies The App.
+*/
+
+class User {
+  // Private Property
+  #e;
+  constructor(id, username, eSalary) {
+    this.i = id;
+    this.u = username;
+    this.#e = eSalary;
+  }
+  // Hidden Implemntation
+  getSalary() {
+    return parseInt(this.#e, 0);
+  }
+}
+class Encapsulation extends User {
+  #in;
+  constructor(id, username, eSalary, incomePrivate) {
+    super(id, username, eSalary);
+    this.#in = incomePrivate;
+  }
+  getIncome() {
+    return super.getSalary() + this.#in;
+  }
+}
+
+let userOne = new User(100, 'Elzero', "5000 Pound");
+let userEncap = new Encapsulation(111, "Mahmoud", 4000, 100);
+
+console.log(userOne.u);
+console.log(userOne.getSalary() * 0.3);
+console.log('#'.repeat(7));
+console.log(userEncap.i);
+console.log(userEncap.u);
+console.log(userEncap.getSalary());
+console.log(userEncap.getIncome());
+
+/*
+  Prototype
+  - Introduction
+  - Prototypes are the mechanism by which JavaScript objects
+    inherit features from one another.
+*/
+
+class User1 {
+  constructor(id, username) {
+    this.i = id;
+    this.u = username;
+  }
+  sayHello() {
+    return `Hello ${this.u}`;
+  }
+}
+
+let userOne1 = new User1(100, "Elzero");
+
+console.log(userOne1.u);
+console.log(User1.prototype);
+
+// className.prototype == all function and properties that you can inherit it and use it from class
+console.log(String.prototype);
+console.log(Object.prototype);
+console.log(Array.prototype);
+// console.log(Map.prototype);
+
+/*
+  Prototype
+  - Add To Prototype Chain
+  - Extend Built In Constructors Features
+*/
+
+class User2 {
+  constructor(id, username) {
+    this.i = id;
+    this.u = username;
+  }
+  sayHello() {
+    return `Hello ${this.u}`;
+  }
+}
+
+let userOne2 = new User2(100, "Elzero");
+console.log(userOne2.u);
+console.log(User2.prototype);
+console.log(userOne2);
+
+User2.prototype.sayWelcome = function () {
+  return `Welcome ${this.u}`;
+}
+
+Object.prototype.love = "Elzero Web Schoo";
+
+String.prototype.addDotBeforeAndAfter = function () {
+  return `.${this}.`;
+}
+
+let strDot = "Mahmoud";
+console.log(strDot);
+console.log(strDot.addDotBeforeAndAfter());
+
+/*
+  Object Meta Data And Descriptor
+  - writable
+  - enumerable
+  - configurable [Cannot Delete Or Reconfigure]
+*/
 
 
 
