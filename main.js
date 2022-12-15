@@ -4118,6 +4118,82 @@ console.log(strDot.addDotBeforeAndAfter());
   - configurable [Cannot Delete Or Reconfigure]
 */
 
+const myObject1 = {
+  a: 1,
+  b: 2,
+};
+
+Object.defineProperty(myObject1, 'c', {
+  writable: false,
+  enumerable: true,
+  configurable: false,
+  value: 3,
+});
+
+// Object.defineProperty(myObject, "c", {
+//   writable: false,
+//   enumerable: true,
+//   configurable: true, <= Cannot redefine property
+//   value: 3,
+// });
+
+myObject1.c = 100;
+
+console.log(delete myObject1.c);
+
+for (let prop in myObject1) {
+  console.log(prop, myObject1[prop]);
+}
+
+console.log(myObject1);
+
+/*
+  Object Meta Data And Descriptor
+  - Define Multiple Properties
+  - Check Descriptors
+*/
+
+const myObject2 = {
+  a: 1,
+  b: 2,
+};
+
+Object.defineProperties(myObject2, {
+  c: {
+    configurable: true,
+    value: 3,
+  },
+  d: {
+    configurable: true,
+    value: 4,
+  },
+  e: {
+    configurable: true,
+    value: 5,
+  },
+});
+
+console.log(myObject2);
+
+console.log(Object.getOwnPropertyDescriptor(myObject2, "d"));
+console.log(Object.getOwnPropertyDescriptors(myObject2)); // Very Important -- Very Much
+
+/*
+  Date And Time
+  - Date Constructor
+
+  Static Methods
+  - Date.now()
+
+  - To Track Time You Need Starting Point
+  - Epoch Time Or Unix Time In Computer Science Is The Number of Seconds Since January 1, 1970.
+  - Why 1970 [829 Days To 136 Years]
+
+  Search For
+  - Year 2038 Problem in Computer Science.
+*/
+
+
 
 
 // // CONST // //
