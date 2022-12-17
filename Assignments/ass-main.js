@@ -1895,7 +1895,7 @@ console.log(userOne.c); // Prevent Accessing To Card Property Here
 // Write Your Code Here
 
 String.prototype.addLove = function() {
-  return `I Love ${myStr} Web School`;
+  return `I Love ${this} Web School`; // this == myStr
 }
 
 // Do Not Edit Below
@@ -1920,9 +1920,9 @@ Object.defineProperties(myObj, {
   id: {
     enumerable: false,
   },
-  country: {
-    configurable: true,
-  }
+  // country: {
+  //   configurable: true,
+  // }
 });
 console.log(delete myObj.country);
 

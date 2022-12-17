@@ -4137,9 +4137,9 @@ Object.defineProperty(myObject1, 'c', {
 //   value: 3,
 // });
 
-myObject1.c = 100;
+// myObject1.c = 100;
 
-console.log(delete myObject1.c);
+// console.log(delete myObject1.c);
 
 for (let prop in myObject1) {
   console.log(prop, myObject1[prop]);
@@ -4191,6 +4191,311 @@ console.log(Object.getOwnPropertyDescriptors(myObject2)); // Very Important -- V
 
   Search For
   - Year 2038 Problem in Computer Science.
+*/
+
+let dataNow = new Date();
+
+console.log(dataNow);
+
+console.log(Date.now()); // 1 Mill = 1 Second
+
+let seconds = Date.now() / 1000; // Number Of Seconds
+console.log(`Seconds ${seconds}`);
+
+let minutes = seconds / 60; // Number Of Minutes
+console.log(`Minutes ${minutes}`);
+
+let hours = minutes / 60; // Number Of Hours
+console.log(`Hours ${hours}`);
+
+let days = hours / 24; // Number Of Days
+console.log(`Days ${days}`);
+
+let years = days / 365; // Number Of Years
+console.log(`Years ${years}`);
+
+/*
+  Date And Time
+  - getTime() => Number Of Milliseconds
+  - getDate() => Day Of The Month
+  - getFullYear()
+  - getMonth() => Zero Based
+  - getDay() => Day Of The Week first(sun) - Zero Based;
+  - getHours()
+  - getMinutes()
+  - getSeconds()
+*/
+
+let dataNow1 = new Date();
+let birthday = new Date("sep 15 2000");
+let dateDiff = dataNow1 - birthday;
+console.log(dateDiff);
+console.log(dateDiff / 1000 / 60 / 60 / 24 / 365);
+
+console.log(dataNow1);
+console.log(dataNow1.getTime());
+console.log(dataNow1.getDate());
+console.log(dataNow1.getFullYear());
+console.log(dataNow1.getMonth());
+console.log(dataNow1.getDay());
+console.log(dataNow1.getHours());
+console.log(dataNow1.getMinutes());
+console.log(dataNow1.getSeconds());
+
+/*
+  Date And Time
+  - setTime(Milliseconds)
+  - setDate() => Day Of The Month [Negative And Positive]
+  - setFullYear(year, month => Optional [0-11], day => Optional [1-31])
+  - setMonth(Month [0-11], Day => Optional [1-31]) [Negative And Positive]
+  - setHours(Hours [0-23], Minutes => Optional [0-59], Seconds => Optional [0-59], MS => Optional [0-999])
+  - setMinutes(Minutes [0-59], Seconds => Optional [0-59], MS => Optional [0-999])
+  - setSeconds(Seconds => [0-59], MS => Optional [0-999])
+*/
+
+let dateNow = new Date();
+console.log(dateNow);
+
+console.log("#".repeat(66));
+
+// dateNow.setTime(0);
+// console.log(dateNow);
+// console.log("#".repeat(66));
+
+// dateNow.setTime(10000);
+// console.log(dateNow);
+// console.log("#".repeat(66));
+
+// dateNow.setDate(35);
+// console.log(dateNow);
+
+// dateNow.setFullYear(2020, 13);
+// console.log(dateNow);
+
+dateNow.setMonth(3, 30);
+console.log(dateNow);
+
+/*
+  Date And Time
+
+  new Date(timestamp)
+  new Date(Date String)
+  new Date(Numeric Values)
+
+  Format
+  - "Oct 25 1982"
+  - "10/25/1982"
+  - "1982-10-25" => ISO International Standard
+  - "1982 10"
+  - "1982"
+  - "82"
+  - 1982, 9, 25, 2, 10, 0
+  - 1982, 9, 25
+  - "1982-10-25T06:10:00Z"
+
+  Date.parse("String") // Read Date From A String
+*/
+console.log('#'.repeat(40));
+
+console.log(Date.parse("Sep 15 2000"));
+
+let date1 = new Date(0);
+console.log(date1);
+
+let date2 = new Date(968965200000);
+console.log(date2);
+
+let date3 = new Date("10/25/1982");
+console.log(date3);
+
+let date4 = new Date("1982-10-25");
+console.log(date4);
+
+let date5 = new Date("1982 10");
+console.log(date5);
+
+let date6 = new Date("1982");
+console.log(date6);
+
+let date7 = new Date("82");
+console.log(date7);
+
+let date8 = new Date(1982, 9, 25, 2, 10, 0);
+console.log(date8);
+
+let date9 = new Date("1982-10-25T06:10:00Z");
+console.log(date9);
+
+/*
+  Date And Time
+  - Track Operations Time
+
+  Search
+  - performance.now()
+  - performance.mark()
+*/
+
+// Start Time
+let start = new Date();
+
+// Operation
+for (let i = 0; i < 1000; i++) {
+  // document.write(`<div>${i}</div>`);
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(i));
+  document.body.appendChild(div);
+}
+
+// End Time
+let end = new Date();
+
+// Operation Duartion 
+let duration = end - start;
+
+console.log(duration);
+
+/*
+  Generators
+  - Generator Function Run Its Code When Required.
+  - Generator Function Return Special Object [Generator Object]
+  - Generators Are Iterable
+*/
+
+function* generateNumbers() {
+  yield 1;
+  console.log('Hello After yiled 1');
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+}
+
+let generator = generateNumbers();
+
+console.log(typeof generator);
+console.log(generator);
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next()); // value become (undefined)
+
+for (let value of generateNumbers()) {
+  console.log(value);
+}
+
+for (let value of generator) { // generator = (undefined) because we yiled all values in functions;
+  console.log(value);
+}
+
+/*
+  Generators
+  - Delegate Generator
+*/
+
+function* generateNums() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+function* generateLetters() {
+  yield "A";
+  yield "B";
+  yield "C";
+}
+
+function* generateAll() {
+  yield* generateNums();
+  yield* generateLetters();
+  yield* [1, 2, 3];
+}
+
+let generator1 = generateAll();
+
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.return("Close rest of generators of generate funtions"));
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
+
+/*
+  Generators
+  - Generate Infinite Numbers
+  - Use Return Inside Generators
+*/
+
+function* generateNumbers1() {
+  // yield 1;
+  // yield 2;
+  // return 'Close';
+  // yield 3;
+  // yield 4;
+  let index = 0;
+  while (true) {
+    yield index++;
+  }
+}
+
+let generator3 = generateNumbers1();
+
+console.log(generator3.next());
+console.log(generator3.next());
+console.log(generator3.next());
+console.log(generator3.next());
+console.log(generator3.next());
+console.log(generator3.next());
+console.log(generator3.next());
+
+/*
+  Modules
+  - Import And Export
+  - Export Alias
+  - Named Export
+  - Default Export
+  - Import All
+*/
+
+let m = 10;
+let arr = [1, 2, 3, 4];
+function saySomething() {
+  return `Something`;
+}
+
+export { m as myNumber, arr, saySomething };
+
+export default function () {
+  return `Hello`;
+}
+
+/*
+  What Is JSON ?
+  - JavaScript Object Notation
+  - Format For Sharing Data Between Server And Client
+  - JSON Derived From JavaScript
+  - Alternative To XML
+  - File Extension Is .json
+
+  Why JSON ?
+  - Easy To Use And Read
+  - Used By Most Programming Languages And Its Frameworks
+  - You Can Convert JSON Object To JS Object And Vice Versa
+
+  JSON vs XML
+  ===================================================
+  = Text Based Format      = Markup Language        =
+  = Lightweight            = Heavier                =
+  = Does Not Use Tags      = Using Tags             =
+  = Shorter                = Not Short              =
+  = Can Use Arrays         = Cannot Use Arrays      =
+  = Not Support Comments   = Support Comments       =
+  ===================================================
 */
 
 
