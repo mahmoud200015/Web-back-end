@@ -191,3 +191,23 @@ let card = c.toString().match(/\d{4}/g).join("-");
 
 // //-----------------------------------------------
 
+// The Difference between in and of
+
+// for (let key in ....)
+// for (let value of ....)
+
+// in => Arrays, Objecjts
+// of => Arrays, Map, Set
+
+/*
+  - In closing
+  - So, by looking at the differences both of these for statements, 
+  it would be safe to tell that the for...in can be used 
+  in most of the cases as you’d be using it with both Objects and Arrays 
+  and also you can get values of the properties using their keys
+  -  However, when you’re only working with Arrays 
+  and only cares about property values, you’d be better off with the for...of.
+*/
+
+// //-----------------------------------------------
+

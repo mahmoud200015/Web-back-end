@@ -1945,3 +1945,175 @@ console.log(myObj);
 
 // // // assign 24
 
+// console.log(Date.now("sep 15 2000")); is wrong
+let datanow = new Date(); // Or Date.now()
+let birthday = new Date("Sep /15 /2000");
+let diff = datanow - birthday;
+console.log(diff);
+let seconds = diff / 1000;
+let minutes = seconds / 60;
+let hours = minutes / 60;
+let days = hours / 24;
+let months = days / 30;
+let years = months / 12;
+
+console.log(Math.trunc(seconds));
+console.log(Math.trunc(minutes));
+console.log(Math.trunc(hours));
+console.log(Math.trunc(days));
+console.log(Math.trunc(months));
+console.log(Math.trunc(years));
+
+// Needed Output
+
+// "1247939400 Seconds"
+// "20798990 Minutes"
+// "346650 Hours"
+// "14444 Days"
+// "481 Months"
+// "40 Years"
+
+// -----------
+
+// Extra Infomration
+console.log(new Date().getTime() === Date.now());
+
+console.log(new Date(1980, 0, 1, 0, 0, 1))
+
+// Needed Output
+
+// "Tue Jan 01 1980 00:00:01 GMT+0200 (Eastern European Standard Time)"
+
+// -----------
+
+// Extra Infomration
+console.log(new Date(null));
+console.log(new Date(0)); // any value (true, false, 1, any number, )
+
+console.log(new Date(2022, 10, 30, 18, 13, 20));
+let dd = new Date();
+dd.setDate(0);
+console.log(dd);
+const month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+console.log(
+  `Previous Month is ${month[new Date(2022, 10).getMonth()]} And Last Day is ${new Date(2022, 10, 30).getDate()}`
+);
+
+// Needed Output
+
+// "Sat Apr 30 2022 18:13:20 GMT+0200 (Eastern European Standard Time)"
+// "Previous Month Is April And Last Day Is 30"
+
+// ------------
+
+// Needed Output
+
+console.log(new Date("sep 15 2000"));
+console.log(new Date(2000, 8, 15));
+console.log(new Date(968965200000));
+
+// "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+// "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+// "Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+
+// ------------
+
+console.log(performance.now())
+let start = performance.now();
+
+// for (let i = 0; i < 99; i++) {
+//   console.log(i);
+// }
+
+let end = performance.now();
+let duration = end - start;
+console.log(`Loop Took ${Math.floor(duration)} Milliseconds`);
+
+// Needed Output
+
+// "Loop Took 1921 Milliseconds."
+
+// -------------
+
+// Write Your Generator Function Here
+
+function* gen() {
+  yield 14;
+  yield 154;
+  yield 494;
+  yield 1034;
+  yield 1774;
+  yield 2714;
+  yield 3854;
+  yield 5194;
+  yield 6734;
+}
+
+let generator = gen();
+
+console.log(generator.next()); // {value: 14, done: false}
+console.log(generator.next()); // {value: 154, done: false}
+console.log(generator.next()); // {value: 494, done: false}
+console.log(generator.next()); // {value: 1034, done: false}
+console.log(generator.next()); // {value: 1774, done: false}
+console.log(generator.next()); // {value: 2714, done: false}
+console.log(generator.next()); // {value: 3854, done: false}
+console.log(generator.next()); // {value: 5194, done: false}
+console.log(generator.next()); // {value: 6734, done: false}
+
+// -----------
+
+function* genNumbers() {
+  yield* [1, 2, 2, 2, 3, 4, 5].filter((ele, index, arr) => {
+    return index === arr.indexOf(ele);
+  });
+}
+function* genLetters() {
+  yield* ["A", "B", "B", "B", "C", "D"];
+}
+
+// Write Your Generator Function Here
+
+function* genAll() {
+  yield* genNumbers();
+  yield* [...new Set(genLetters())];
+}
+
+let generator1 = genAll();
+
+console.log(generator1.next()); // {value: 1, done: false}
+console.log(generator1.next()); // {value: 2, done: false}
+console.log(generator1.next()); // {value: 3, done: false}
+console.log(generator1.next()); // {value: 4, done: false}
+console.log(generator1.next()); // {value: 5, done: false}
+console.log(generator1.next()); // {value: "A", done: false}
+console.log(generator1.next()); // {value: "B", done: false}
+console.log(generator1.next()); // {value: "C", done: false}
+console.log(generator1.next()); // {value: "D", done: false}
+
+// -------------
+
+// import calc, * as modOne from './mod-two.js';
+
+// // main.js File
+// console.log()
+// console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree)); // 60
+
+// // // //-----------------------------------
+// // // /*----------------------------------*/
+
+// // // assign 25
+
