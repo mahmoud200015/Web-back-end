@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="qr-code">
+    <h2 align="center">QR Code Generator</h2>
+    <center>
+      <img src="" class="img-qr" class="hidden">
+    </center>
+    <select id="cht-select">
+      <option value="100">100x100</option>
+      <option value="150">150x150</option>
+      <option value="200" selected>200x200</option>
+      <option value="250">250x250</option>
+    </select>
+    <textarea class="text-box" placeholder="Enter Your Text"></textarea>
+    <input type="submit" value="Generate" class="generate">
+    <p>Developed By Mahmoud Ayman 2022</p>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
