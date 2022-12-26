@@ -2117,3 +2117,132 @@ console.log(generator1.next()); // {value: "D", done: false}
 
 // // // assign 25
 
+// let req = new XMLHttpRequest();
+// console.log(req);
+// req.open("GET", "./articles.json", true);
+// req.send();
+// req.onreadystatechange = function () {
+//   // console.log(req.readyState);
+//   // console.log(req.status);
+//   if (this.readyState === 4 && this.status === 200) {
+//     console.log(this.responseText);
+//     console.log("Data Loaded");
+//   }
+// }
+
+// Needed Output
+
+// "JSON Object Content Here"
+// "Data Loaded"
+
+// --------------
+
+let req = new XMLHttpRequest();
+console.log(req);
+req.open("GET", "./articles.json", true);
+req.send();
+req.onreadystatechange = function () {
+  // console.log(req.readyState);
+  // console.log(req.status);
+  if (this.readyState === 4 && this.status === 200) {
+    // Convert to JavaScript Object
+    let mainData = JSON.parse(this.responseText);
+    // console.log(mainData['articles']['0']['section']);
+    for (let i = 0; i < 5; i++) {
+      mainData["articles"][`${i}`]["section"] = 'All';
+    }
+    console.log(mainData);
+
+    // Convert to JSON Object
+    let updatedData = JSON.stringify(mainData);
+    console.log(updatedData);
+    for (let j = 0; j < 5; j++) {
+      let d = mainData["articles"][`${j}`];
+      let mainDiv = document.getElementById("data");
+      let div = document.createElement("div");
+      let h2 = document.createElement("h2");
+      let p1 = document.createElement("p");
+      let p2 = document.createElement("p");
+      let p3 = document.createElement("p");
+      h2.innerHTML = d["title"];
+      p1.innerHTML = d["body"];
+      p2.textContent = d["author"];
+      p3.innerText = d["section"];
+      div.append(h2, p1, p2, p3);
+      mainDiv.appendChild(div);
+    }
+  }
+};
+  
+
+// mainData Variable Content
+// 0: {id: 1, title: 'Title 1', body: 'Article Number 1 Body', category: 'All', author: 'Ali'}
+// 1: {id: 2, title: 'Title 2', body: 'Article Number 2 Body', category: 'All', author: 'Mahmoud'}
+// 2: {id: 3, title: 'Title 3', body: 'Article Number 3 Body', category: 'All', author: 'Osama'}
+// 3: {id: 4, title: 'Title 4', body: 'Article Number 4 Body', category: 'All', author: 'Sayed'}
+// 4: {id: 5, title: 'Title 5', body: 'Article Number 5 Body', category: 'All', author: 'Ahmed'}
+
+// // UpdatedData Variable Content
+// "JSON Object Content Here"
+
+// // // //-----------------------------------
+// // // /*----------------------------------*/
+
+// // // assign 26 -- The Last -- Be Happy
+
+// const getData = (link) => {
+//   return new Promise((res, rej) => {
+//     let req1 = new XMLHttpRequest();
+//     req1.open("GET", link, true);
+//     req1.send();
+//     console.log(req1);
+
+//     req1.onload = function () {
+//       if (req1.status === 200 && req1.readyState === 4) {
+//         res(JSON.parse(this.responseText));
+//       } else {
+//         rej(Error("No Data Found"));
+//       }
+//     };
+//   });
+  
+// }
+
+// getData("./arts.json").then((result) => {
+//   result.length = 5;
+//   return result;
+// }).then((res) => {
+//   console.log(res[0]);
+//   for (let i = 0; i < res.length; i++) {
+//     let div = document.createElement("div");
+//     let h2 = document.createElement("h2");
+//     let p = document.createElement("p");
+//     h2.innerHTML = res[i].title;
+//     p.textContent = res[i].description;
+//     div.append(h2, p);
+//     document.body.appendChild(div);
+//   }
+// })
+
+// Use Fetch;
+
+fetch("./arts.json").then((res0) => {
+  return res0.json()
+}).then((res1) => {
+  res1.length = 5;
+  return res1;
+}).then((res2) => {
+  for (let i = 0; i < res2.length; i++) {
+    let div = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let p = document.createElement("p");
+    h2.innerHTML = res2[i].title;
+    p.textContent = res2[i].description;
+    div.append(h2, p);
+    document.body.appendChild(div);
+  }
+});
+
+// END Of The Assignments -- By Happy;
+//-------------------------------------------
+
