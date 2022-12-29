@@ -1,0 +1,1138 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #DDD;
+  color: #000;
+  box-sizing: border-box;
+  margin: 0;
+  /* min-height: 3000px; */
+  /* width: 4000px; */
+  height: 4000px;
+}
+
+/* 
+.one,
+.two,
+.three,
+.four,
+.five {
+  padding: 10px;
+  margin: 10px;
+  background-color: #DDD;
+  width: 300px;
+}
+.one {
+  color: red;
+  border-bottom: 2px dashed red;
+}
+.two {
+  color: green;
+  border-bottom: 2px dashed green;
+}
+.three {
+  color: blue;
+  border-bottom: 2px dashed blue;
+}
+.four {
+  color: black;
+  border-bottom: 2px dashed black;
+} */
+/* Nesting in CSS (important)
+div p {
+  color: #FFF;
+}
+.width-height {
+  padding: 10px;
+  background-color: #DDD;
+  color: slategrey;
+  min-height: 20px;
+  width: fit-content;
+}
+.over-flow {
+  width: 150px;
+  padding: 10px;
+  background-color: #DDD;
+  margin: 20px;
+  max-height: 100px;
+  /* overflow: hidden 
+  overflow: auto;
+} */
+
+/* .text {
+  background-color: #eee;
+  width: 400px;
+  /* color: red; 
+  text-shadow: 1px 1px 3px rgb(255, 85, 0);
+  text-align: center;
+  direction: ltr;
+  text-decoration: overline;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* word-spacing: 3px; */
+  /* text-indent: 100px; */
+  /* line-height: 1.6px; 
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text:hover {
+  overflow: visible;
+}
+.text img {
+  vertical-align: bottom;
+}
+
+.inherit {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  font-size: 20px;
+  border: 2px solid #b4b4dd;
+  margin: 20px auto;
+  width: fit-content;
+}
+.inherit h3,p {
+  border: inherit;
+  padding: inherit;
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+body {
+  margin: 0px
+}
+.parent {
+  background-color: red;
+  padding: 10px;
+  opacity: 0.7;
+  /* position: sticky; 
+  top: 10px;
+}
+.parent div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  width: calc((100% - 6*10px) / 5);
+  margin-left: 10px;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+
+.position {
+  background-color: green;
+  color: #fff;
+  padding: 10px;
+  /* position: fixed; 
+  right: 0;
+  bottom: 0;
+}
+.zindex div {
+  padding: 20px;
+  width: 100px;
+  /* margin: 20px auto; 
+  color: #fff;
+  text-align: center;
+  position: absolute;
+}
+.zone {
+  background-color: red;
+  bottom: 20;
+  right: 10;
+  z-index: 3;
+}
+.ztwo {
+  background-color: green;
+  z-index: 2;
+  bottom: 15;
+  right: 5;
+}
+.zthree {
+  background-color: blue;
+  z-index: 1;
+}
+
+.liststyle {
+  list-style: none inside ;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+table {
+  width: 100%;
+  background-color: #eee;
+  border-spacing: 0;
+}
+table td {
+  padding: 20px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+table thead td {
+  background-color: #e28c01;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  border-color:rgb(255 132 71);
+}
+
+.one:hover {
+  color: black;
+}
+a:visited {
+  color: red;
+}
+/* .ch:checked + label {
+  color: blue;
+} 
+.ch:checked {
+  display: none;
+}
+.in {
+  border: 2px solid black;
+}
+.in:focus {
+  border-color: yellow;
+  outline: none;
+}
+/* p:empty,
+div:empty {
+  border: 10px solid red;
+} 
+
+.one span {
+  background-color: red;
+  font-size: 40px;
+  color: #FFF;
+  font-weight: bold;
+}
+.two::first-letter {
+  background-color: red;
+  font-size: 40px;
+  color: #FFF;
+  font-weight: bold;
+}
+.three::first-line {
+  color: green;
+  font-weight: bold;
+}
+::selection {
+  color: yellow;
+  background-color: black;
+}
+
+.parents {
+  margin-bottom: 20px;
+  overflow: hidden;
+  counter-increment: member-counters;
+}
+.ones {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+} */
+/* .ones::after {
+  content: "";
+  background-color: #e28c01;
+  width: 0px;
+  height: 68px;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+} */
+/* .ones::before {
+  content: "";
+  border:10px solid;
+  border-color: transparent #e28c01 transparent transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  margin-top: -10px;
+  top: 50%;
+  left: -20px;
+}
+.ones::after {
+  /* content: attr() 
+  /* content: url(); 
+  content: counter(member-counters);
+  background-color: #e28c01;
+  color: #FFF;
+  font-weight: bold;
+  padding: 3px;
+  position:absolute;
+  top: 0;
+  right: 0;
+
+}
+.user {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 55.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+} */
+/* ul li {
+  list-style: none;
+  padding: 10px;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  border:10px solid;
+  border-color: transparent #e28c01 transparent transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -20px;
+} */
+
+/* * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.radius {
+  background-color: red !important;
+  height: 150px;
+  width: 150px;
+  margin: 20px auto;
+  border-radius: 10px 20px 30px 40pc;
+  box-shadow: 5px 7px 20px 8px #7d7676;
+  transition: all 1s linear 1s;
+}
+.radius:hover {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px 50px 60px 70px;
+}*/
+/*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+/* .parentss {
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+.parentss .oness,
+.parentss .twoss {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.oness {
+  background-color: #ddd;
+}
+.twoss {
+  background-color: #aaa;
+}
+.ups {
+  background-color: var(--mainColor);
+  color: white;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.downs {
+  background-color: green;
+  color: white;
+  height: 80px;
+  margin-top: 40px;
+} */
+/* 
+Global Variable
+Locale Variable
+eg:..
+padding: var(--mainPadding)
+*/
+/* :root {
+  --mainColor: black;
+  --mainPadding: 20px;
+} */
+
+/*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  ---
+  - justify-content: flex-start => Default Value , center -> horizontal
+  - align-items: stretch => Default Value , center -> vertical
+  - align-content: stretch => Default Value
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+  - flex-basis: auto => Default Value
+  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+  - align-self: auto => Default Value
+
+*/
+/*
+.flex {
+  background-color: #eee;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap !important; 
+  flex-flow:row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  /* align-content: center;
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(98% / 5);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 0; 
+  flex-shrink: 1;
+  order: 4;
+  flex: 0 1 100px;
+}
+.float {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.float div {
+  /* To space between elements it's very hard so use Flex Box and justify-content
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+.center {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 200px;
+  /* To Center The Elemet in The box use the flex and justify-content and align-items 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  /* filter: blur(4px); 
+  filter: grayscale(100%)
+}
+.center:hover {
+  filter: grayscale(0);
+}
+/*
+  Gradients
+  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2, ....)
+
+
+.grad {
+  width: 400px;
+  height: 200px;
+  background-color: #eee;
+  margin: 20px auto;
+  position: relative;
+  padding: 10px;
+  caret-color: #8e44ad;
+  pointer-events: none;
+}
+.grad:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    #2980b9 20%,
+    #27ae60 20%,
+    #27ae60 40%,
+    #d35400 40%,
+    #d35400 60%,
+    #8e44ad 60%,
+    #8e44ad 80%,
+    #c0392b 80%
+  )
+} */
+
+/*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat]
+  - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+  - gap: [Row Gap] [Column Gap]
+  - justify-content - align-content
+  Child 
+  - grid-column: [Grid-Column-Start] [Grid-Column-End] 
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+  Advanced
+  - grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
+*/
+/* .grid {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  /* grid-template-columns: repeat(2, auto) repeat(2, 1fr); 
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 5px 12px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.grid div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-with-grid {
+  height: 100vh;
+  background-color: #EEE;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px 1fr 50px;
+  gap: 2px 10px;
+  grid-template-areas: 
+    "logo logo nav nav nav nav nav nav nav nav"
+    "cont cont cont cont cont cont cont cont side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+  justify-content: center;
+  align-content: center;
+}
+.page-with-grid h2,
+.page-with-grid nav,
+.page-with-grid section,
+.page-with-grid aside,
+.page-with-grid footer {
+  background-color: #27ae60;
+}
+.page-with-grid h2 {
+  grid-area: logo;
+}
+.page-with-grid nav {
+  grid-area: nav;
+}
+.page-with-grid ul li {
+  display: inline-block;
+  
+}
+.page-with-grid section {
+  grid-area: cont;
+}
+.page-with-grid aside {
+  grid-area: side;
+}
+.page-with-grid footer {
+  grid-area: foot;
+}
+
+.grids {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 10px;
+  /* grid-column: space 4; You must specfic Unique Element to do this not all 
+}
+.grids div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+} */
+
+
+/*
+  matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+  eg..
+  transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+  transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+  ----------------
+  transform-origin
+  Syntax
+  Default Values => 50% 50% 0
+  2D Transform => transform-origin(X, Y)
+  3D Transform => transform-origin(X, Y, Z)
+  X-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Left = 0%
+  -- Center = 50%
+  -- Right = 100%
+  Y-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Top = 0%
+  -- Center = 50%
+  -- Bottom = 100%
+*/
+/* .transform2d {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: rgb(255 0 0 / 39%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  /* transform: scaleX(2);
+  transform: scaleY(2); 
+  transition: all 0.7s;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: top 10%;
+}
+.transform2d:hover {
+  background-color: rgb(255 0 0 / 89%);
+  transform: scale(1.8, 1.3) rotate(-10deg) translate(-50px, -50px) skew(40deg, 0);
+}
+.transform3d {
+  /* margin: 200px auto; 
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: rgb(255 0 0 / 90%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  transition: all 0.5s;
+  /* transform: rotate3d(0, 1, 1, 65deg); 
+  /* transform: translate(100px, -100px);
+  transform: translateX(100px);
+  transform: translateZ(100px); 
+  transform: translate3d(0, 0, 200px);
+  perspective: 500px;
+}
+.test {
+  background-color: #EEE;
+  width: 220px;
+  height: 220px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.test:hover .transform3d {
+  transform: translate3d(0);
+  perspective-origin: center center;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  perspective: 500px;
+}
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: top left;
+}
+.box:hover {
+  transform: translateX(100%) rotateY(-180deg)
+}
+.box .face {
+  position: absolute;
+  border-radius: 30%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFE;
+  backface-visibility: hidden;
+}
+.box .front {
+  background-color:rgb(255, 85, 0);
+}
+.box .back {
+  background-color:#2980b9;
+  transform: rotateY(180deg)
+} */
+
+/*
+  Animation
+  - KeyFrames
+  - Name
+  - Duration
+  - Iteration Count
+  - Timing Function
+  - Spinner Loading
+  - Direction
+  - Delay
+  - Fill-Mode
+  - Play-State
+  - Shorthand (animation:)
+  - Loading Animation
+*/
+
+/* .animation {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-left-color: transparent;
+  /* transform: translate(-50%, -50%); 
+  animation-name: spin, change-color;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+  /* animation: spin 3s linear 1s reverse both infinite paused; 
+}
+.animation:hover {
+  animation-play-state: running;
+}
+@keyframes change-color {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: #27ae60;
+  }
+  40% {
+    background-color: #2980b9;
+  }
+  60% {
+    background-color: #8e44ad;
+  }
+  80% {
+    background-color: yellowgreen;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.load {
+  display: flex;
+  justify-content: center;
+  margin: 300px auto;
+}
+.load div{
+  width: 50px;
+  height: 50px;
+  background-color: #2980b9;
+  margin: 0 5px;
+  border-radius: 50%;
+  animation-name: up-and-down;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.load ._2 {
+  animation-delay: 0.2s;
+}
+.load ._3 {
+  animation-delay: 0.4s;
+}
+@keyframes up-and-down {
+  to {
+    opacity: 0.5;
+    transform: translateY(-40px);
+  }
+} */
+
+/*
+  CSS Selectors
+  - *
+  - Element => [p, div, h2]
+  - Element OtherElement => div p
+  - .class-name
+  - #id-name
+  - .parent .child
+  - .class-one.class-two
+  - .class-name div, .class-name p
+  - Element.class-name => p.class-name
+  - .parent > .child => Direct Child
+  ==========
+  ==Part 2==
+  ==========
+  - Element + Other Element => [div + p]
+  - Element ~ Other Elements => [p ~ div]
+  - [Attribute]
+  - Element[Attribute]
+  - [Attribute=Value]
+  - Element[Attribute=Value] => input[type="submit"]
+  - [Attribute~=Value] => Contains A Word
+  - [Attribute*=Value] => Contains A String
+  - [Attribute^=Value] => Start With A String
+  ==========
+  ==Part 3==
+  ==========
+  - :first-child
+  - :last-child
+  - :first-of-type
+  - :last-of-type
+  - :only-child
+  - :only-of-type
+  ==========
+  ==Part 4==
+  ==========
+  - :not(Selectors)
+  - :nth-child(n)
+  - :nth-last-child(n)
+  - :nth-of-type(n)
+  - :nth-last-of-type(n)
+  ==========
+  ==Part 5==
+  ==========
+  - :root
+  - :checked
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+
+
+/*
+  Media Queries
+  Responsive Design
+  - Mobile First
+  - Test Devices
+*/
+.media {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+.media > div {
+  background-color: yellow;
+  width: 290px;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .media > div {
+    background-color: orange;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {}
+
+/* Small Screens */
+
+@media (min-width: 768px) {
+  .media>div {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Medium Screens */
+
+@media (min-width: 992px) {
+  .media>div {
+    width: calc(25% - 10px);
+  }
+}
+
+/* Large Screens */
+
+@media (min-width: 1200px) {}
+
+/* Custom */
+
+@media (max-width: 1199px) {}
+
+/*
+  CSS Global Values
+  - inherit
+  - initial
+  - unset
+  --- If Inherit => inherit
+  --- If Not => initial
+  - revert CSS Level [4]
+  - all
+*/
+
+div.test {
+  font-size: 30px;
+  line-height: 2;
+}
+
+button.up {
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  outline: none;
+  display: none;
+  cursor: pointer;
+}
+button.up::before {
+  content: "";
+  position: absolute;
+  border: 20px solid;
+  border-color: transparent transparent red transparent;
+  top: -39px;
+  left: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  background-color: #ddd;
+  margin: 20px auto;
+  padding: 20px;
+  width: 400px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul li.active,
+ul li:hover {
+  opacity: 1;
+}
+
+ul li:first-child {
+  background-color: red;
+}
+
+ul li:nth-child(2) {
+  background-color: green;
+}
+
+ul li:nth-child(3) {
+  background-color: blue;
+}
+
+ul li:nth-child(4) {
+  background-color: black;
+}
+
+.experiment {
+  background-color: red;
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+/*--------------------*/
+
+:root {
+  --main-color: #ff9800;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+.container {
+  width: calc(100% - 50px);
+  margin: 20px auto;
+}
+
+.form {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid var(--main-color);
+  flex: 1;
+  outline: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.add,
+#del {
+  padding: 10px;
+  background-color: var(--main-color);
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--main-color);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#completed {
+  border: 30px double;
+  border-color: transparent #444 transparent transparent;
+  border-radius: 50%;
+  margin-left: -30px;
+}
+
+.tasks {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 2px solid var(--main-color);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+  opacity: 0.5;
+}
+
+.tasks .task span {
+  padding: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10px;
+  background-color: #b00020;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/*------------------------------*/
+
+#element {
+  color: #FFF;
+  background-color: #666;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/*------------------------------*/
+

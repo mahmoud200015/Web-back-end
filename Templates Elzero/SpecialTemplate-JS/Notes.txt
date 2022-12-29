@@ -1,0 +1,17 @@
+- This Template, You do it with elzero to learn JavaScipt specially and revision on html, css.
+- This is special, and there are four template (html-css), you just do one of them.
+-------------------
+====================
+-------------------
+- About Template:
+- No Framework
+- Vanilla JavaScipt
+- Many Plugins
+- jQuery For Plugins
+- No UI/UX Sketches
+- Mind Mapping
+- No SASS
+- No Pugjs
+--------------------
+=====================
+--------------------
