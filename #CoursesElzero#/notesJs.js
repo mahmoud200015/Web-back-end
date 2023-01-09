@@ -242,3 +242,12 @@ obj.newProp = "Test";
 console.log(obj); 
 
 // //-----------------------------------------------
+
+// convert binary to decimal
+console.log(0b1101);
+console.log(parseInt(101, 2))
+// convert decimal to binary
+console.log((101).toString(2))
+
+// //-----------------------------------------------
+

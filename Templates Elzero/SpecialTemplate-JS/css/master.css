@@ -1,9 +1,19 @@
 :root {
   --main-color: #FF9800;
 }
-
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Open Sans', sans-serif;
+}
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
 }
 
 /* Start Settings box */
@@ -20,6 +30,11 @@ body {
 .settings-box.open {
   left: 0;
 }
+.settings-box hr {
+  background-color: #EEE;
+  height: 2px;
+  border: none;
+}
 .settings-box .toggle-settings {
   position: absolute;
   right: -30px;
@@ -35,8 +50,83 @@ body {
 .settings-box .toggle-settings .fa-gear{
   padding: 10px 0;
   width: 30px;
+  color: #EEE;
 }
+.settings-box .settings-container .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #EEE;
+  margin: 10px;
+}
+.settings-box .settings-container .option-box h4 {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  /* color: var(--main-color); */
+}
+.settings-box .settings-container .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.settings-box .settings-container .colors-list li {
+  width: 24px;
+  height: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid transparent;
+  display: inline-block;
+}
+.settings-box .settings-container .colors-list li.active {
+  border-color: #FFF;
+}
+.settings-box .settings-container .colors-list li:nth-child(1) {
+  background-color: #FF9800;
+}
+.settings-box .settings-container .colors-list li:nth-child(2) {
+  background-color: red;
+}
+.settings-box .settings-container .colors-list li:nth-child(3) {
+  background-color: blue;
+}
+.settings-box .settings-container .colors-list li:nth-child(4) {
+  background-color: green;
+}
+.settings-box .settings-container .colors-list li:nth-child(5) {
+  background-color: purple;
+}
+.settings-box .settings-container .random-backgrounds .yes,
+.settings-box .settings-container .random-backgrounds .no {
+  width: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #009688;
+  color: #FFF;
+  margin: 10px 0 0;
+  padding: 4px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.settings-box .settings-container .random-backgrounds span.active {
+  opacity: 1;
+}
+.settings-box .settings-container .random-backgrounds .no {
+  margin-left: 15px;
+}
+/* .settings-box .settings-container .option-box .yes .fa-check, 
+.settings-box .settings-container .option-box .no .fa-xmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 /* End Settings box */
+
+
+
 
 /* Start Landing Page */
 .landing-page {
@@ -96,6 +186,7 @@ body {
   transform: translate(-50%, -50%);
   color: #FFF;
   text-align: center;
+  width: 100%;
 }
 .landing-page .introduction-text h1 {
   font-size: 40px;
@@ -110,3 +201,33 @@ body {
   margin: 0;
 }
 /* End Landing Page */
+
+/* Start About Us */
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.about-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+.about-us .info-box h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.about-us .info-box p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.about-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+.about-us .image-box img {
+  width: 300px;
+}
+/* End About Us */
