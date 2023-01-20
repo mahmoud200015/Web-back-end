@@ -77,6 +77,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   border: 4px solid transparent;
+  transition: 0.2s;
   display: inline-block;
 }
 .settings-box .settings-container .colors-list li.active {
@@ -231,3 +232,276 @@ body {
   width: 300px;
 }
 /* End About Us */
+
+/* Start Our Skills */
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #DDD;
+}
+.skills h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+}
+.skills .skill-box {
+  background-color: #FFF;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: calc(100%);
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: all .5s;
+}
+/* End Our Skills */
+
+/* Start Gallery */
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.gallery h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+}
+.gallery .images-box {
+  text-align: center;
+}
+.gallery .images-box img {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #f6f6f6;
+  border: 1px solid #CCC;
+  cursor: pointer;
+}
+.gallery .images-box img:last-child {
+  height: 117.5px;
+}
+.popup-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+.popup-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  padding: 20px;
+  z-index: 10001;
+}
+.popup-box h3 {
+  /* font-weight: bold; */
+  /* text-align: center; */
+  width: fit-content;
+  margin: 15px auto; 
+  margin-top: 0;
+  padding: 5px;
+  color: var(--main-color);
+  border: 3px dashed var(--main-color);
+}
+.popup-box img {
+  max-width: 100%;
+  padding: 5px;
+  background-color: #f6f6f6;
+  border: 2px solid #BBB;
+}
+.popup-box .close-span {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  /* background-color: var(--main-color); */
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFF;
+  cursor: pointer;
+  font-family: Arial, Tahoma;
+}
+.popup-box .fa-droplet {
+  position: absolute;
+  top: -22px;
+  right: -14px;
+  font-size: 45px;
+  color: var(--main-color);
+  text-align: center;
+  z-index: -1;
+}
+/* End Gallery */
+
+/* Start TimeLine */
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #EEE;
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .timeline-content::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+.timeline .timeline-content .year {
+  margin: 20px auto;
+  width: 50px;
+  background-color: var(--main-color);
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 25px);
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline .timeline-content .left {
+  float: left;
+}
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 3px solid var(--main-color);
+  top: 20px;
+}
+.timeline .timeline-content .left::before {
+  right: -35px;
+}
+.timeline .timeline-content .right::before {
+  left: -34.45px;
+}
+.timeline .timeline-content .right {
+  float: right;
+}
+.timeline .timeline-content .content {
+  padding: 20px;
+  background-color: #FFF;
+}
+.timeline .timeline-content .content h3 {
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.timeline .timeline-content .content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+.clearfix {
+  clear: both;
+}
+.timeline .timeline-content .left .content::before,
+.timeline .timeline-content .right .content::before {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  top: 20px;
+}
+.timeline .timeline-content .left .content::before {
+  right: -19px;
+  border-color: transparent transparent transparent #FFF;
+}
+.timeline .timeline-content .right .content::before {
+  left: -19px;
+  border-color: transparent #FFF transparent transparent;
+}
+
+/* End TimeLine */
+
+/* Start Our Features */
+.features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.features h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 60px;
+  text-align: center;
+}
+.features .feat-box {
+  width: calc(100% / 3);
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.features .feat-box img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+.features .feat-box h4 {
+  font-size: 22px;
+  margin: 15px 0 40px;
+  position: relative;
+}
+.features .feat-box h4::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: var(--main-color);  
+  left: 50%;
+  margin-left: -25px; /* -(width/2) */
+  bottom: -22px;
+}
+.features .feat-box p {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #706f6f;
+}
+/* End Our Features */
