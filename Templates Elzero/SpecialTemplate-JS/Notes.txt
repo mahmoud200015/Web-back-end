@@ -15,3 +15,5 @@
 --------------------
 =====================
 --------------------
+
+// apply many projects (from elzero , 30dayJs) and add them to this portfolio;

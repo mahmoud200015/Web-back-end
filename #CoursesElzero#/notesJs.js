@@ -251,3 +251,9 @@ console.log((101).toString(2))
 
 // //-----------------------------------------------
 
+// JavaScript recognizes seven primitive(immutable) data types:
+// Boolean, Null, Undefined, Number, String, Symbol(new with ES6), and BigInt(new with ES2020),
+// and one type for mutable items: Object.
+// Note that in JavaScript, arrays are technically a type of object.
+
+// //-----------------------------------------------
