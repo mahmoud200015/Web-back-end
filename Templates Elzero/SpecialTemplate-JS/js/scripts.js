@@ -261,16 +261,42 @@ ourGallery.forEach((img) => {
     // Append Close Span to Popup Box --
     popupBox.appendChild(closeSpan);
     popupBox.appendChild(iconBack);
+    
+    // Create Object of our projects (all details)
+    let detailsProjects = {
+      imageSlide: {
+        textContent: "Skills Used: Html, css, (Javascript)",
+        linkhref: "https://imagesliderjs.blogspot.com/",
+        linktext: "Js Slider",
+      },
+      qrCode: {
+        textContent: "Skills Used: Html, (css), (Javascript)",
+        linkhref: "https://qrcodegentherock.blogspot.com/",
+        linktext: "QR Code Generator",
+      },
+    };
 
     // Create Details for Image Project
-    let skills = document.createElement("p");
-    skills.textContent = "Skills Used: Html, css, (Javascript)";
-    popupBox.appendChild(skills);
-    let link = document.createElement("a");
-    link.href = "https://imagesliderjs.blogspot.com/";
-    link.target = '_blank';
-    link.textContent = "Js Slider";
-    popupBox.appendChild(link);
+    for (let project in detailsProjects) {
+      console.log(detailsProjects[project].textContent)
+      let skills = document.createElement("p");
+      skills.textContent = detailsProjects[project].textContent;
+      popupBox.appendChild(skills);
+      let link = document.createElement("a");
+      link.href = detailsProjects[project].linkhref;
+      link.target = "_blank";
+      link.textContent = detailsProjects[project].linktext;
+      popupBox.appendChild(link);
+    }
+
+    // let skills = document.createElement("p");
+    // skills.textContent = "Skills Used: Html, css, (Javascript)";
+    // popupBox.appendChild(skills);
+    // let link = document.createElement("a");
+    // link.href = "https://imagesliderjs.blogspot.com/";
+    // link.target = '_blank';
+    // link.textContent = "Js Slider";
+    // popupBox.appendChild(link);
   });
 });
 
