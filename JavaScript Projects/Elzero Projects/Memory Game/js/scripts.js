@@ -13,6 +13,18 @@ document.querySelector(".control-buttons span").onclick = function () {
   // Remove control buttons from dom page
   document.querySelector(".control-buttons").remove();
 
+  // Add Time to Game
+  let timeSpan = document.querySelector(".info-container .time span");
+  let timer = setInterval(() => {
+    timeSpan.innerHTML++;
+    // If all blocks has class matched
+    let allMatch = blocks.filter((block) =>
+      block.classList.contains("has-match")
+    );
+    if (allMatch.length === blocks.length) {
+      clearInterval(timer);
+    }
+  }, 1000);
 }
 
 // Effect Duration
@@ -119,3 +131,24 @@ function shuffle(array) {
   return array;
 }
 
+// =======================================
+
+// // Add Time to Game
+// let timeSpan = document.querySelector(".info-container .time span");
+// let timer = setInterval(() => {
+//   timeSpan.innerHTML++;
+//   // If all blocks has class matched
+//   let allMatch = blocks.filter(block => block.classList.contains("has-match"));
+//   if (allMatch.length === blocks.length) {
+//     clearInterval(timer);
+//   }
+// }, 1000);
+
+// ==========
+
+
+
+
+// Important (used in many tricks)
+// // If all blocks has class matched
+// // let allMatch = blocks.filter(block => block.classList.contains("has-match"));

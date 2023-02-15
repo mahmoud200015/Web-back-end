@@ -257,3 +257,18 @@ console.log((101).toString(2))
 // Note that in JavaScript, arrays are technically a type of object.
 
 // //-----------------------------------------------
+
+// Remember in the last challenge we mentioned that splice() can take up to three parameters ?
+//   Well, you can use the third parameter, comprised of one or more element(s),
+//   to add to the array.This can be incredibly useful for quickly switching out an element,
+//     or a set of elements, for another.
+
+const numbers = [10, 11, 12, 12, 15];
+const startIndex = 3;
+const amountToDelete = 1;
+
+numbers.splice(startIndex, amountToDelete, 13, 14);
+console.log(numbers);
+
+// //-----------------------------------------------
+
