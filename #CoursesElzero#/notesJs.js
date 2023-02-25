@@ -272,3 +272,12 @@ console.log(numbers);
 
 // //-----------------------------------------------
 
+// Do not use the Boolean() constructor with new to convert a non - boolean value to a boolean value 
+// — use Boolean as a function or a double NOT instead:
+
+const good = Boolean(expression);    // use this
+const good2 = !!(expression);        // or this
+const bad = new Boolean(expression); // don't use this!
+
+// //-----------------------------------------------
+

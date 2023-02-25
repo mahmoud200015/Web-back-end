@@ -1,31 +1,31 @@
-// Start the game when click start
-document.querySelector(".control-buttons span").onclick = function () {
-  // Append Name of user
-  let yourName = prompt("Enter you name?");
-  if (yourName === "" || yourName === null) {
-    document.querySelector(".info-container .name span").innerHTML = "Un Known";
-  } else {
-    document.querySelector(".info-container .name span").textContent = yourName;
-  }
+// // Start the game when click start
+// document.querySelector(".control-buttons span").onclick = function () {
+//   // Append Name of user
+//   let yourName = prompt("Enter you name?");
+//   if (yourName === "" || yourName === null) {
+//     document.querySelector(".info-container .name span").innerHTML = "Un Known";
+//   } else {
+//     document.querySelector(".info-container .name span").textContent = yourName;
+//   }
 
-  document.getElementById("start").play();
+//   document.getElementById("start").play();
 
-  // Remove control buttons from dom page
-  document.querySelector(".control-buttons").remove();
+//   // Remove control buttons from dom page
+//   document.querySelector(".control-buttons").remove();
 
-  // Add Time to Game
-  let timeSpan = document.querySelector(".info-container .time span");
-  let timer = setInterval(() => {
-    timeSpan.innerHTML++;
-    // If all blocks has class matched
-    let allMatch = blocks.filter((block) =>
-      block.classList.contains("has-match")
-    );
-    if (allMatch.length === blocks.length) {
-      clearInterval(timer);
-    }
-  }, 1000);
-}
+//   // Add Time to Game
+//   let timeSpan = document.querySelector(".info-container .time span");
+//   let timer = setInterval(() => {
+//     timeSpan.innerHTML++;
+//     // If all blocks has class matched
+//     let allMatch = blocks.filter((block) =>
+//       block.classList.contains("has-match")
+//     );
+//     if (allMatch.length === blocks.length) {
+//       clearInterval(timer);
+//     }
+//   }, 1000);
+// }
 
 // Effect Duration
 let duration = 1000;

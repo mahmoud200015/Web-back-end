@@ -144,7 +144,7 @@ function randomizeImgs() {
       }.jpg")`;
       landingPage.style.transition = "0.6s";
       // landingPage.style.transform = "translate(1, 2)";
-    }, 1000);
+    }, 3000);
   }
 }
 randomizeImgs();
