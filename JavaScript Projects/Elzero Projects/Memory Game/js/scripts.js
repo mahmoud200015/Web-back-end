@@ -148,7 +148,6 @@ function shuffle(array) {
 
 
 
-
 // Important (used in many tricks)
 // // If all blocks has class matched
 // // let allMatch = blocks.filter(block => block.classList.contains("has-match"));

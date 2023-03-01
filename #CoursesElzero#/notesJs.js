@@ -281,3 +281,12 @@ const bad = new Boolean(expression); // don't use this!
 
 // //-----------------------------------------------
 
+// new method in Object Object.hasOwn(obj, prop) rather than obj.hasOwnProperty
+
+let obj = Object.create(null);
+obj.fred = "YES";
+console.log(Object.hasOwn(obj, "fred"));    // new
+// console.log(obj.hasOwnProperty("fred")); // old
+
+// //-----------------------------------------------
+
