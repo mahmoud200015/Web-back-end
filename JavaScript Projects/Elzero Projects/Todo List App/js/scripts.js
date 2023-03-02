@@ -105,30 +105,30 @@ function createTasks(task) {
 
   // Create span element - delete button
   let mainSpan = document.createElement("span");
-  let delSpan = document.createElement("span");
-  let compSpan = document.createElement("span");
+  let delSpan = document.createElement("i");
+  let updateSpan = document.createElement("i"); //
   let checkmark = document.createElement("span");
 
   // Create text for span - text for delete
   let txtMain = document.createTextNode(task);
   let txtDel = document.createTextNode("Delete");
-  let txtComp = document.createTextNode("Finish");
+  // let txtComp = document.createTextNode("Finish"); //
 
 
   // Add Text to mainSpan - delSpan
   mainSpan.appendChild(txtMain);
-  delSpan.appendChild(txtDel);
-  compSpan.appendChild(txtComp);
+  // delSpan.appendChild(txtDel);
+  // updateSpan.appendChild(txtComp); //
 
   // Add del to main span
   mainSpan.appendChild(delSpan);
-  mainSpan.appendChild(compSpan);
+  mainSpan.appendChild(updateSpan);
   mainSpan.appendChild(checkmark);
 
   // Add Classes on elements
   mainSpan.className = "task-box";
-  delSpan.className = "delete";
-  compSpan.className = "complete";
+  delSpan.className = "delete fa-solid fa-delete-left";
+  updateSpan.className = "update fa-solid fa-pen-to-square";
   checkmark.className = "check";
 
   // Check if the task is already exist
@@ -193,7 +193,7 @@ function checkTasks(inputValue) {
 
 document.addEventListener('click', function (e) {
   // Delete Task
-  if (e.target.className === "delete") {
+  if (e.target.classList.contains("delete")) {
     // To remove element task
     e.target.parentElement.remove();
 
@@ -210,49 +210,25 @@ document.addEventListener('click', function (e) {
       createNoTasks();
     }
   }
-  // Finish Task
-  if (e.target.className === "complete") {
-    // Toggle class 'finished'
-    e.target.parentElement.classList.toggle("finished");
-
-    // Make Sweet alert success
-    if (e.target.parentElement.classList.contains("finished")) {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 2000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener("mouseenter", Swal.stopTimer);
-          toast.addEventListener("mouseleave", Swal.resumeTimer);
-        },
-      });
-
-      Toast.fire({
-        icon: "success",
-        title: "Finshed, Keep Going 💪🏼",
-      });
-
-      // Local Storage
-      let valueFinished = e.target.parentElement.innerHTML.slice(
-        0,
-        e.target.parentElement.innerHTML.indexOf("<")
+  // Update Task -- ⬇️⬇️⬇️ Complete (update icon and delete icon);
+  if (e.target.classList.contains("update")) {
+    // Remove Element Select to update from (local storage (localtodos -- localfinished) & page);
+    // From local storage = localtodos
+    let task = e.target.parentElement.innerHTML.slice(
+      0,
+      e.target.parentElement.innerHTML.indexOf("<")
       );
-      if (!localfinished.includes(valueFinished)) {
-        localfinished.push(valueFinished);
-        localStorage.setItem("finished", JSON.stringify(localfinished));
-      } else {
-      }
-    } else {
-      // local storage
-      let task = e.target.parentElement.innerHTML.slice(
-        0,
-        e.target.parentElement.innerHTML.indexOf("<")
-      );
-      localfinished.splice(localfinished.indexOf(task), 1);
-      localStorage.setItem("finished", JSON.stringify(localfinished));
-    }
+    localtodos.splice(localtodos.indexOf(task), 1);
+    localStorage.setItem("localtodo", JSON.stringify(localtodos));
+    // From local storage = localfinished
+    localfinished.splice(localfinished.indexOf(task), 1);
+    localStorage.setItem("finished", JSON.stringify(localfinished));
+    // ----
+    // From Page
+    e.target.parentElement.remove();
+    // Update input value to update text of the task
+    theInput.focus();
+    theInput.value = task;
   }
 
   // ---------------
@@ -368,11 +344,11 @@ function finishAllTasks() {
     // To Finish All Tasks
     Array.from(taskCont.children).forEach((task) => {
       task.classList.add("finished");
+      task.children[2].classList.add("right");
+      // console.log(task.children[2])
 
       if (task.classList.contains("finished")) {
         doSweet = true;
-      } else {
-        doSweet = false;
       }
     });
 
