@@ -290,3 +290,36 @@ console.log(Object.hasOwn(obj, "fred"));    // new
 
 // //-----------------------------------------------
 
+// == Understand the Immediately Invoked Function Expression (IIFE)
+
+// A common pattern in JavaScript is to execute a function as soon as it is declared:
+
+(function () {
+  console.log("Chirp, chirp!");
+})();
+
+// This is an anonymous function expression that executes right away, and outputs Chirp, chirp! immediately.
+
+// Note that the function has no name and is not stored in a variable.
+// The two parentheses() at the end of the function expression cause it to be immediately executed or invoked.
+// This pattern is known as an immediately invoked function expression or IIFE.
+
+// //-----------------------------------------------
+
+// Very Important (about type of functions in javascript (FP))
+
+/*
+But first, let's cover some functional terminology:
+
+Callbacks are the functions that are slipped or passed into another function to decide the invocation of that function. You may have seen them passed to other methods, for example in filter, the callback function tells JavaScript the criteria for how to filter an array.
+
+Functions that can be assigned to a variable, passed into another function, or returned from another function just like any other normal value, are called first class functions. In JavaScript, all functions are first class functions.
+
+The functions that take a function as an argument, or return a function as a return value, are called higher order functions.
+
+When functions are passed in to or returned from another function, then those functions which were passed in or returned can be called a lambda.
+
+*/
+
+// //-----------------------------------------------
+

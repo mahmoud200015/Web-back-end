@@ -146,7 +146,22 @@ function shuffle(array) {
 
 // ==========
 
+let nums = [1, 1,1, 2, 2, 2, 3];
+const map = new Map();
+for (let n of nums) {
+  map.set(n, map.get(n) + 1 || 1);
+}
+console.log(map)
+let res = nums.sort((a, b) => map.get(a) - map.get(b) || b - a);
 
+console.log(res);
+
+// 
+
+// make obj (k:v) = (num: count) {1: 3, 2: 3, 3: 1}
+// sort obj decreasing by key {3:1, 2:3, 1:3}
+// sort array of countNums in increasing  [1, 3, 3]
+// 3 2 2 2 1 1 1
 
 // Important (used in many tricks)
 // // If all blocks has class matched

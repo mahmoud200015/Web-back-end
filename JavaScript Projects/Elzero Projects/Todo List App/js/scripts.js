@@ -189,7 +189,7 @@ function checkTasks(inputValue) {
   return existed;
 }
   
-// ----------------------   Above is Done ---- LOOK Below ⬇️⬇️⬇️⬇️
+// ----------------------   delete - update - finish (task);
 
 document.addEventListener('click', function (e) {
   // Delete Task
@@ -197,7 +197,7 @@ document.addEventListener('click', function (e) {
     // To remove element task
     e.target.parentElement.remove();
 
-    // local storage
+    // local storage of localtodos
     let task = e.target.parentElement.innerHTML.slice(
       0,
       e.target.parentElement.innerHTML.indexOf("<")
@@ -205,12 +205,16 @@ document.addEventListener('click', function (e) {
     localtodos.splice(localtodos.indexOf(task), 1);
     localStorage.setItem("localtodo", JSON.stringify(localtodos));
 
+    // local storage of localfinished
+    localfinished.splice(localfinished.indexOf(task), 1);
+    localStorage.setItem("finished", JSON.stringify(localfinished));
+
     // check if tasks = 0 and no tasks to show
     if (taskCont.children.length === 0) {
       createNoTasks();
     }
   }
-  // Update Task -- ⬇️⬇️⬇️ Complete (update icon and delete icon);
+  // Update Task 
   if (e.target.classList.contains("update")) {
     // Remove Element Select to update from (local storage (localtodos -- localfinished) & page);
     // From local storage = localtodos
@@ -316,23 +320,43 @@ btnFinishAll.addEventListener('click', finishAllTasks);
 
 // Function to delete all tasks or finished
 function deleteAllTasks() {
-  if (taskCont.contains(document.querySelector(".tasks-content .task-box"))) {
-    // To Remove All Element Tasks
-    Array.from(taskCont.children).forEach((task) => {
-      task.remove();
-    });
-    // local storage
-    // localStorage.removeItem("localtodo");
-    // localStorage.clear();
-    localStorage.setItem("localtodo", JSON.stringify([]));
+  // New in my code Confirm Message before delete all tasks
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire("Deleted!", "Your tasks has been deleted.", "success");
+      // Delete all tasks
+      if (
+        taskCont.contains(document.querySelector(".tasks-content .task-box"))
+      ) {
+        // To Remove All Element Tasks
+        Array.from(taskCont.children).forEach((task) => {
+          task.remove();
+        });
+        // local storage of localtodos
+        // localStorage.removeItem("localtodo");
+        // localStorage.clear();
+        localStorage.setItem("localtodo", JSON.stringify([]));
+        // local storage of localfinished
+        localStorage.setItem("finished", JSON.stringify([]));
 
-    // check if tasks = 0 and no tasks to show
-    if (taskCont.children.length === 0) {
-      createNoTasks();
+        // check if tasks = 0 and no tasks to show
+        if (taskCont.children.length === 0) {
+          createNoTasks();
+        }
+      } else {
+        Swal.fire("No tasks to delete");
+      }
     }
-  } else {
-    Swal.fire("No tasks to delete");
-  }
+  });
+  
 
   // Calculate Tasks -- possible to delete function call and it works but I don't know why
   calcTasks();
@@ -395,3 +419,13 @@ function finishAllTasks() {
 function showfeatures() {
   document.querySelector(".extra-develop h2").style.display = "block";
 }
+
+// ------- Links Of me
+// let linkedin = document.querySelector(".contacts .fa-linkedin");
+// linkedin.addEventListener('click', (e) => {
+//   window.open("https://www.linkedin.com/in/mahmoudayman2019/", "_blank");
+// });
+// let github = document.querySelector(".contacts .fa-square-github");
+// github.addEventListener('click', (e) => {
+//   window.open("https://github.com/mahmoud200015", "_blank");
+// });
