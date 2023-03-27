@@ -105,9 +105,16 @@ document.addEventListener('click', (event) => {
     
     // Update in Function end game Below...⬇️⬇️⬇️
     console.log(lettersGuessContainer.children);
+    let successLettersCount = 0;
     lettersGuessContainer.childNodes.forEach((child) => {
-      console.log(child.textContent);
+      if (child.textContent !== "") {
+        successLettersCount++;
+      }
     });
+    if (lettersGuessContainer.childNodes.length === successLettersCount) {
+      console.log(successLettersCount);
+      successGuess();
+    }
 
     // outside of the loop forEach
     if (theStatus !== true) {
@@ -143,6 +150,11 @@ function endGame() {
   div.className = "popup";
   // Append to Body
   document.body.appendChild(div);
+}
+
+// Function success guess (Needs More work on it and focus to make better!!)
+function successGuess() {
+  
 }
 
 // Tasks from elzero to you (learn from them);
