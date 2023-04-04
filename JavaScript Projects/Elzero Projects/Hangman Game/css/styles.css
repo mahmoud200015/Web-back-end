@@ -274,7 +274,7 @@ hr {
 
 .popup {
   position: fixed;
-  background-color: #009688;
+  background-color: red;
   padding: 100px 20px;
   width: 80%;
   top: 10%;
