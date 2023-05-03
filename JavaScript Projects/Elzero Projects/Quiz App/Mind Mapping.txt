@@ -1,0 +1,29 @@
+# Prerequisites:
+- JavaScript
+- DOM
+- BOM
+- AJAX
+- JSON
+- JavaScript Big Tutorials
+---------------------------
+# Mind Mapping:
+1- Create JSON Object For Questions (Done✅)
+2- Create HTML Markup ( )
+3- Add Dummy Data ( )
+4- Create CSS Styling ( )
+5- Fetch some of Questions From json Object ( )
+6- Show Questions Count + Questions Category ( )
+7- Show the number of Bullets based on Questions Count ( )
+8- Set Number of Right and Wrong Answers ( )
+9- Create CountDown Timer ( )
+10- Fetch All Questions ( )
+11- Just Show The First Question ( )
+12- Check The answer then hide question then show the next ( )
+13- If the time ends Mark current question as wrong then show the next ( )
+14- Add class on Bullet after answering the question ( )
+15- Show The Result if the questions is finished ( )
+-----------------------------
+Ideas Extra for me:
+- Many Json Objects and Choose Language;
+- Add Many Questions and Choose Only 10 Randomly;
+- Randomize Answers ( shuffle function )
