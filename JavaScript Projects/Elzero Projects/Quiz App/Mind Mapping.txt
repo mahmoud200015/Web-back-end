@@ -8,9 +8,9 @@
 ---------------------------
 # Mind Mapping:
 1- Create JSON Object For Questions (Done✅)
-2- Create HTML Markup ( )
-3- Add Dummy Data ( )
-4- Create CSS Styling ( )
+2- Create HTML Markup ( Done✅)
+3- Add Dummy Data ( Done✅)
+4- Create CSS Styling (Done✅ )
 5- Fetch some of Questions From json Object ( )
 6- Show Questions Count + Questions Category ( )
 7- Show the number of Bullets based on Questions Count ( )
